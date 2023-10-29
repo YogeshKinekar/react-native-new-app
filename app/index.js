@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { View, ScrollView, SafeAreaView } from "react-native";
 import { Stack, useRouter } from 'expo-router';
 
-import { COLORS, icons, SIZES} from '../constants';
+import { COLORS, icons, SIZES, images} from '../constants';
 import { Nearbyjobs, Popularjobs, ScreenHeader, ScreenHeaderBtn, Welcome } from '../components';
 
 const Home = () => {
@@ -14,12 +14,12 @@ const Home = () => {
         options={{
             headerStyle: { backgroundColor:COLORS.lightWhite },
             headerShadowVisible: false,
-            headerLeft: () => {
+            headerLeft: () => (
                 <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
-            },
-            headerRight: () => {
+    ),
+            headerRight: () => (
                 <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
-            },
+            ),
             headerTitle: " "
         }}
         />
